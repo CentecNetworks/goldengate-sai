@@ -1,0 +1,7 @@
+ASIC GodenGate
+
+#1. datapath init
+datapath /etc/datapath_profile/datapath_cfg.txt
+
+gchip_0 0
+local_chip_num 1

@@ -1,0 +1,11 @@
+# Copyright (C) 2016 Centec Networks (suzhou) Co., Ltd. All Rights Reserved.
+
+prefix=/usr
+exec_prefix=${prefix}
+includedir=${prefix}/include
+
+Name: libsai 
+Description: Centec GoldenGate SAI
+Version: 1.0
+Libs: -lsai
+Cflags: -I${includedir}
