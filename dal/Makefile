@@ -1,3 +1,6 @@
+obj-m := dal.o
+dal-y := dal_kernel.o dal_mpool.o
+
 KERNEL_SRC ?= /lib/modules/$(shell uname -r)/build
 
 all:
