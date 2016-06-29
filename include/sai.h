@@ -55,7 +55,7 @@
 #include <saischedulergroup.h>
 #include <saiisolation.h>   /* added by kcao for SAI_EXT_ISOLATION 2015-12-01 */
 //#include <saibuffer.h>
-
+#include <saihash.h>
 /* modified by wanjj for some test */
 //#include <saibuffer.h>
 
