@@ -482,7 +482,12 @@ typedef enum _sai_port_attr_t
     /** -- */
 
     /* Custom range base value */
-    SAI_PORT_ATTR_CUSTOM_RANGE_BASE  = 0x10000000
+    SAI_PORT_ATTR_CUSTOM_RANGE_BASE  = 0x10000000,
+
+    /* uint32_t default true */
+    SAI_PORT_ATTR_CUSTOM_UNTAG_DEFAULT_VLAN,
+
+    SAI_PORT_ATTR_CUSTOM_RANGE_END,
 
 } sai_port_attr_t;
 
