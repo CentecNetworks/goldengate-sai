@@ -1,0 +1,280 @@
+{
+  "manufacturer": "Centec",
+  "product_name": "E582-48X2Q4Z",
+  "version": "1",
+  "port_info": {
+    "number_ports": 54
+  },
+  "ports": [
+    {
+      "name": " 1",
+      "hw_lane_id": 1,
+      "switch_device_port": "0x801B"
+    },
+    {
+      "name": " 2",
+      "hw_lane_id": 2,
+      "switch_device_port": "0x8019"
+    },
+    {
+      "name": " 3",
+      "hw_lane_id": 3,
+      "switch_device_port": "0x8018"
+    },
+    {
+      "name": " 4",
+      "hw_lane_id": 4,
+      "switch_device_port": "0x8016"
+    },
+    {
+      "name": " 5",
+      "hw_lane_id": 5,
+      "switch_device_port": "0x8015"
+    },
+    {
+      "name": " 6",
+      "hw_lane_id": 6,
+      "switch_device_port": "0x8013"
+    },
+    {
+      "name": " 7",
+      "hw_lane_id": 7,
+      "switch_device_port": "0x8012"
+    },
+    {
+      "name": " 8",
+      "hw_lane_id": 8,
+      "switch_device_port": "0x8010"
+    },
+    {
+      "name": " 9",
+      "hw_lane_id": 9,
+      "switch_device_port": "0x800F"
+    },
+    {
+      "name": "10",
+      "hw_lane_id": 10,
+      "switch_device_port": "0x800D"
+    },
+    {
+      "name": "11",
+      "hw_lane_id": 11,
+      "switch_device_port": "0x800C"
+    },
+    {
+      "name": "12",
+      "hw_lane_id": 12,
+      "switch_device_port": "0x800A"
+    },
+    {
+      "name": "13",
+      "hw_lane_id": 13,
+      "switch_device_port": "0x8009"
+    },
+    {
+      "name": "14",
+      "hw_lane_id": 14,
+      "switch_device_port": "0x8008"
+    },
+    {
+      "name": "15",
+      "hw_lane_id": 15,
+      "switch_device_port": "0x8007"
+    },
+    {
+      "name": "16",
+      "hw_lane_id": 16,
+      "switch_device_port": "0x8005"
+    },
+    {
+      "name": "17",
+      "hw_lane_id": 17,
+      "switch_device_port": "0x8004"
+    },
+    {
+      "name": "18",
+      "hw_lane_id": 18,
+      "switch_device_port": "0x8002"
+    },
+    {
+      "name": "19",
+      "hw_lane_id": 19,
+      "switch_device_port": "0x8001"
+    },
+    {
+      "name": "20",
+      "hw_lane_id": 20,
+      "switch_device_port": "0x8000"
+    },
+    {
+      "name": "21",
+      "hw_lane_id": 21,
+      "switch_device_port": "0x0000"
+    },
+    {
+      "name": "22",
+      "hw_lane_id": 22,
+      "switch_device_port": "0x0001"
+    },
+    {
+      "name": "23",
+      "hw_lane_id": 23,
+      "switch_device_port": "0x0003"
+    },
+    {
+      "name": "24",
+      "hw_lane_id": 24,
+      "switch_device_port": "0x0002"
+    },
+    {
+      "name": "25",
+      "hw_lane_id": 25,
+      "switch_device_port": "0x0004"
+    },
+    {
+      "name": "26",
+      "hw_lane_id": 26,
+      "switch_device_port": "0x0005"
+    },
+    {
+      "name": "27",
+      "hw_lane_id": 27,
+      "switch_device_port": "0x0006"
+    },
+    {
+      "name": "28",
+      "hw_lane_id": 28,
+      "switch_device_port": "0x0007"
+    },
+    {
+      "name": "29",
+      "hw_lane_id": 29,
+      "switch_device_port": "0x0008"
+    },
+    {
+      "name": "30",
+      "hw_lane_id": 30,
+      "switch_device_port": "0x0009"
+    },
+    {
+      "name": "31",
+      "hw_lane_id": 31,
+      "switch_device_port": "0x000A"
+    },
+    {
+      "name": "32",
+      "hw_lane_id": 32,
+      "switch_device_port": "0x000C"
+    },
+    {
+      "name": "33",
+      "hw_lane_id": 33,
+      "switch_device_port": "0x000D"
+    },
+    {
+      "name": "34",
+      "hw_lane_id": 34,
+      "switch_device_port": "0x000F"
+    },
+    {
+      "name": "35",
+      "hw_lane_id": 35,
+      "switch_device_port": "0x0010"
+    },
+    {
+      "name": "36",
+      "hw_lane_id": 36,
+      "switch_device_port": "0x0012"
+    },
+    {
+      "name": "37",
+      "hw_lane_id": 37,
+      "switch_device_port": "0x0013"
+    },
+    {
+      "name": "38",
+      "hw_lane_id": 38,
+      "switch_device_port": "0x0015"
+    },
+    {
+      "name": "39",
+      "hw_lane_id": 39,
+      "switch_device_port": "0x0016"
+    },
+    {
+      "name": "40",
+      "hw_lane_id": 40,
+      "switch_device_port": "0x0018"
+    },
+    {
+      "name": "41",
+      "hw_lane_id": 41,
+      "switch_device_port": "0x0019"
+    },
+    {
+      "name": "42",
+      "hw_lane_id": 42,
+      "switch_device_port": "0x001B"
+    },
+    {
+      "name": "43",
+      "hw_lane_id": 43,
+      "switch_device_port": "0x001C"
+    },
+    {
+      "name": "44",
+      "hw_lane_id": 44,
+      "switch_device_port": "0x001E"
+    },
+    {
+      "name": "45",
+      "hw_lane_id": 45,
+      "switch_device_port": "0x001F"
+    },
+    {
+      "name": "46",
+      "hw_lane_id": 46,
+      "switch_device_port": "0x0021"
+    },
+    {
+      "name": "47",
+      "hw_lane_id": 47,
+      "switch_device_port": "0x0022"
+    },
+    {
+      "name": "48",
+      "hw_lane_id": 48,
+      "switch_device_port": "0x0028"
+    },
+    {
+      "name": "49",
+      "hw_lane_id": 49,
+      "switch_device_port": "0x0024"
+    },
+    {
+      "name": "50",
+      "hw_lane_id": 50,
+      "switch_device_port": "0x002C"
+    },
+    {
+      "name": "51",
+      "hw_lane_id": 51,
+      "switch_device_port": "0x802C"
+    },
+    {
+      "name": "52",
+      "hw_lane_id": 52,
+      "switch_device_port": "0x8024"
+    },
+    {
+      "name": "53",
+      "hw_lane_id": 53,
+      "switch_device_port": "0x8028"
+    },
+    {
+      "name": "54",
+      "hw_lane_id": 54,
+      "switch_device_port": "0x8020"
+    }
+  ]
+}
