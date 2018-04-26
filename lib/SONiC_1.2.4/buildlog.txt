@@ -53,3 +53,24 @@ make: *** [all] Error 2
 http_proxy=http://192.168.25.29:3128 https_proxy=http://192.168.25.29:3128 make configure PLATFORM=centec
 http_proxy=http://192.168.25.29:3128 https_proxy=http://192.168.25.29:3128 make
 
+yangbs@centec-OSP:~/sonic/master/sonic-buildimage$ http_proxy=http://192.168.25.29:3128 https_proxy=http://192.168.25.29:3128 make
+SONiC Build System
+
+Build Configuration
+"CONFIGURED_PLATFORM"             : "centec"
+"SONIC_CONFIG_PRINT_DEPENDENCIES" : ""
+"SONIC_BUILD_JOBS"                : "1"
+"SONIC_CONFIG_MAKE_JOBS"          : "12"
+"DEFAULT_USERNAME"                : "admin"
+"DEFAULT_PASSWORD"                : "x"
+"ENABLE_DHCP_GRAPH_SERVICE"       : ""
+"SHUTDOWN_BGP_ON_START"           : ""
+"ENABLE_PFCWD_ON_START"           : ""
+"SONIC_CONFIG_DEBUG"              : ""
+"ROUTING_STACK"                   : "quagga"
+"ENABLE_SYNCD_RPC"                : ""
+"ENABLE_ORGANIZATION_EXTENSIONS"  : "y"
+"HTTP_PROXY"                      : "http://192.168.25.29:3128"
+"HTTPS_PROXY"                     : "http://192.168.25.29:3128"
+"ENABLE_SYSTEM_TELEMETRY"         : ""
+
