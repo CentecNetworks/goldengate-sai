@@ -1,0 +1,33 @@
+root@switch1:/home/admin# show queue counters Ethernet1
+Command: queuestat -p Ethernet1
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes
+---------  -----  --------------  ---------------  -----------  ------------
+Ethernet1    UC0               0                0            0             0
+Ethernet1    UC1               0                0            0             0
+Ethernet1    UC2               0                0            0             0
+Ethernet1    UC3               0                0            0             0
+Ethernet1    UC4               0                0            0             0
+Ethernet1    UC5               0                0            0             0
+Ethernet1    UC6               0                0            0             0
+Ethernet1    UC7             106            23728            0             0
+Ethernet1    MC0               0                0            0             0
+Ethernet1    MC1               0                0            0             0
+Ethernet1    MC2               0                0            0             0
+Ethernet1    MC3               0                0            0             0
+
+
+root@switch1:/home/admin# 
+
+
+
+root@switch1:/home/admin# show interfaces portchannel
+Command: teamshow
+Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available, S - selected, D - deselected
+  No.  Team Dev       Protocol     Ports
+-----  -------------  -----------  ---------------------------
+   01  PortChannel01  LACP(A)(Dw)  Ethernet11(D) Ethernet12(D)
+   02  PortChannel02  LACP(A)(Dw)  Ethernet14(D) Ethernet13(D)
+
+root@switch1:/home/admin#
+
+
