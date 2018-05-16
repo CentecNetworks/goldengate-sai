@@ -46,3 +46,25 @@ Ethernet1   ALL7               7              859            0             0
 
 
 root@switch1:/home/admin# 
+
+
+
+
+root@switch1:/home/admin# show queue counters 
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes
+---------  -----  --------------  ---------------  -----------  ------------
+Ethernet1    UC0               0                0            0             0
+Ethernet1    UC1               0                0            0             0
+Ethernet1    UC2               0                0            0             0
+Ethernet1    UC3               0                0            0             0
+Ethernet1    UC4               0                0            0             0
+Ethernet1    UC5               0                0            0             0
+Ethernet1    UC0               0                0            0             0
+Ethernet1    UC1               0                0            0             0
+Ethernet1    MC2               0                0            0             0
+Ethernet1    MC3               0                0            0             0
+Ethernet1    MC4               0                0            0             0
+Ethernet1    MC5               0                0            0             0
+
+
+
