@@ -31,3 +31,18 @@ Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available, S - se
 root@switch1:/home/admin#
 
 
+root@switch1:/home/admin# show queue counters Ethernet1
+Command: queuestat -p Ethernet1
+     Port    TxQ    Counter/pkts    Counter/bytes    Drop/pkts    Drop/bytes
+---------  -----  --------------  ---------------  -----------  ------------
+Ethernet1   ALL0               0                0            0             0
+Ethernet1   ALL1               0                0            0             0
+Ethernet1   ALL2               0                0            0             0
+Ethernet1   ALL3               0                0            0             0
+Ethernet1   ALL4               0                0            0             0
+Ethernet1   ALL5               0                0            0             0
+Ethernet1   ALL6               0                0            0             0
+Ethernet1   ALL7               7              859            0             0
+
+
+root@switch1:/home/admin# 
