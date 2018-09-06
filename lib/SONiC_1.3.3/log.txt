@@ -115,3 +115,98 @@ Makefile:13: recipe for target 'stretch' failed
 make: *** [stretch] Error 2
 yangbs@centec-OSP:~/sonic/centec/master/sonic-buildimage$
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+yangbs@centec-OSP:~/sonic/centec/master/sonic-buildimage$ make all
++++ --- Making all --- +++
+BLDENV=stretch make -f Makefile.work stretch
+make[1]: Entering directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
+SONiC Build System
+
+Build Configuration
+"CONFIGURED_PLATFORM"             : "centec"
+"SONIC_CONFIG_PRINT_DEPENDENCIES" : ""
+"SONIC_BUILD_JOBS"                : "1"
+"SONIC_CONFIG_MAKE_JOBS"          : "12"
+"USERNAME"                        : "admin"
+"PASSWORD"                        : "x"
+"ENABLE_DHCP_GRAPH_SERVICE"       : ""
+"SHUTDOWN_BGP_ON_START"           : ""
+"ENABLE_PFCWD_ON_START"           : ""
+"SONIC_INSTALL_DEBUG_TOOLS"       : ""
+"ROUTING_STACK"                   : "quagga"
+"ENABLE_SYNCD_RPC"                : ""
+"ENABLE_ORGANIZATION_EXTENSIONS"  : "y"
+"HTTP_PROXY"                      : ""
+"HTTPS_PROXY"                     : ""
+"ENABLE_SYSTEM_TELEMETRY"         : ""
+"SONIC_DEBUGGING_ON"              : "y"
+"SONIC_PROFILING_ON"              : ""
+"KERNEL_PROCURE_METHOD"           : "build"
+
+make: Nothing to be done for 'stretch'.
+make[1]: Leaving directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
+make -f Makefile.work all
+make[1]: Entering directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
+SONiC Build System
+
+Build Configuration
+"CONFIGURED_PLATFORM"             : "centec"
+"SONIC_CONFIG_PRINT_DEPENDENCIES" : ""
+"SONIC_BUILD_JOBS"                : "1"
+"SONIC_CONFIG_MAKE_JOBS"          : "12"
+"USERNAME"                        : "admin"
+"PASSWORD"                        : "x"
+"ENABLE_DHCP_GRAPH_SERVICE"       : ""
+"SHUTDOWN_BGP_ON_START"           : ""
+"ENABLE_PFCWD_ON_START"           : ""
+"SONIC_INSTALL_DEBUG_TOOLS"       : ""
+"ROUTING_STACK"                   : "quagga"
+"ENABLE_SYNCD_RPC"                : ""
+"ENABLE_ORGANIZATION_EXTENSIONS"  : "y"
+"HTTP_PROXY"                      : ""
+"HTTPS_PROXY"                     : ""
+"ENABLE_SYSTEM_TELEMETRY"         : ""
+"SONIC_DEBUGGING_ON"              : "y"
+"SONIC_PROFILING_ON"              : ""
+"KERNEL_PROCURE_METHOD"           : "build"
+
+[ FAIL LOG START ] [ target/debs/linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb-install ]
+Selecting previously unselected package linux-headers-4.9.0-7-amd64.
+(Reading database ... 140478 files and directories currently installed.)
+Preparing to unpack .../linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb ...
+Unpacking linux-headers-4.9.0-7-amd64 (4.9.110-3+deb9u2) ...
+dpkg: dependency problems prevent configuration of linux-headers-4.9.0-7-amd64:
+ linux-headers-4.9.0-7-amd64 depends on linux-kbuild-4.9; however:
+  Package linux-kbuild-4.9 is not installed.
+ linux-headers-4.9.0-7-amd64 depends on linux-compiler-gcc-6-x86 (>= 4.9.82-1+deb9u1~); however:
+  Package linux-compiler-gcc-6-x86 is not installed.
+
+dpkg: error processing package linux-headers-4.9.0-7-amd64 (--install):
+ dependency problems - leaving unconfigured
+Errors were encountered while processing:
+ linux-headers-4.9.0-7-amd64
+[  FAIL LOG END  ] [ target/debs/linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb-install ]
+slave.mk:322: recipe for target 'target/debs/linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb-install' failed
+make: *** [target/debs/linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb-install] Error 1
+Makefile.work:97: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
+Makefile:6: recipe for target 'all' failed
+make: *** [all] Error 2
+yangbs@centec-OSP:~/sonic/centec/master/sonic-buildimage$ 
+
