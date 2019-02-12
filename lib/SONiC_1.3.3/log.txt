@@ -1,212 +1,141 @@
-@centec-OSP:~/sonic/centec/master/sonic-buildimage$ http_proxy=http://192.168.25.29:3128 https_proxy=http://192.168.25.29:3128 make configure PLATFORM=centec
-+++ Making configure +++
-make -f Makefile.work configure
-make[1]: Entering directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
-SONiC Build System
-
-Build Configuration
-"CONFIGURED_PLATFORM"             : "centec"
-"SONIC_CONFIG_PRINT_DEPENDENCIES" : ""
-"SONIC_BUILD_JOBS"                : "1"
-"SONIC_CONFIG_MAKE_JOBS"          : "12"
-"USERNAME"                        : "admin"
-"PASSWORD"                        : "x"
-"ENABLE_DHCP_GRAPH_SERVICE"       : ""
-"SHUTDOWN_BGP_ON_START"           : ""
-"ENABLE_PFCWD_ON_START"           : ""
-"SONIC_INSTALL_DEBUG_TOOLS"       : ""
-"ROUTING_STACK"                   : "quagga"
-"ENABLE_SYNCD_RPC"                : ""
-"ENABLE_ORGANIZATION_EXTENSIONS"  : "y"
-"HTTP_PROXY"                      : "http://192.168.25.29:3128"
-"HTTPS_PROXY"                     : "http://192.168.25.29:3128"
-"ENABLE_SYSTEM_TELEMETRY"         : ""
-"SONIC_DEBUGGING_ON"              : "y"
-"SONIC_PROFILING_ON"              : ""
-"KERNEL_PROCURE_METHOD"           : "build"
-
-make[1]: Leaving directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
-yangbs@centec-OSP:~/sonic/centec/master/sonic-buildimage$ http_proxy=http://192.168.25.29:3128 https_proxy=http://192.168.25.29:3128 make 
-+++ Making stretch +++
-BLDENV=stretch make -f Makefile.work stretch
-make[1]: Entering directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
-Image sonic-slave-stretch-base:b1d9644dea0 not found. Building...
-Sending build context to Docker daemon  10.75kB
-Step 1/24 : FROM debian:stretch
- ---> 3bbb526d2608
-Step 2/24 : MAINTAINER gulv@microsoft.com
- ---> Running in ccc3130adb82
- ---> 941d11df2ccc
-Removing intermediate container ccc3130adb82
-Step 3/24 : RUN echo "deb http://debian-archive.trafficmanager.net/debian/ stretch main contrib non-free" >> /etc/apt/sources.list &&         echo "deb-src http://debian-archive.trafficmanager.net/debian/ stretch main contrib non-free" >> /etc/apt/sources.list &&         echo "deb http://debian-archive.trafficmanager.net/debian-security/ stretch/updates main contrib non-free" >> /etc/apt/sources.list &&         echo "deb-src http://debian-archive.trafficmanager.net/debian-security/ stretch/updates main contrib non-free" >> /etc/apt/sources.list &&         echo "deb http://debian-archive.trafficmanager.net/debian stretch-backports main" >> /etc/apt/sources.list
- ---> Running in 38ffb00478c4
- ---> cd21b400a945
-Removing intermediate container 38ffb00478c4
-Step 4/24 : ENV DEBIAN_FRONTEND noninteractive
- ---> Running in 282fe779c4b0
- ---> 024ff3f9019b
-Removing intermediate container 282fe779c4b0
-Step 5/24 : RUN apt-get update && apt-get install -y         apt-utils         default-jre-headless         openssh-server         curl         wget         unzip         git         build-essential         libtool         lintian         sudo         dh-make         dh-exec         kmod         libtinyxml2-4         libboost-program-options1.62-dev         libtinyxml2-dev         python         python-pip         libncurses5-dev         texinfo         dh-autoreconf         python3-pip         doxygen         devscripts         git-buildpackage         perl-modules         libswitch-perl         dh-systemd         libreadline-dev         texlive-latex-base         texlive-generic-recommended         texlive-fonts-recommended         libpam0g-dev         libpam-dev         libcap-dev         imagemagick         ghostscript         groff         libpcre3-dev         gawk         chrpath         libc-ares-dev         libsnmp-dev         libjson-c3         libjson-c-dev         libsystemd-dev         python-ipaddr         cdbs         libxml-simple-perl         graphviz         aspell         bc         fakeroot         build-essential         devscripts         quilt         stgit         module-assistant         gem2deb         libboost-all-dev         libevent-dev         libglib2.0-dev         libqt4-dev         python-all-dev         python-twisted         phpunit         libbit-vector-perl         openjdk-8-jdk         javahelper         maven-debian-helper         ant         libmaven-ant-tasks-java         libhttpclient-java         libslf4j-java         libservlet3.1-java         qt5-default         libpcre3         libpcre3-dev         byacc         flex         libglib2.0-dev         bison         expat         libexpat1-dev         dpatch         libdb-dev         iptables-dev         swig         libtool-bin         libxml2-dev         cpio         squashfs-tools         zip         linux-compiler-gcc-6-x86         linux-kbuild-4.9         libdaemon-dev         libdbus-1-dev         libjansson-dev         libpcap-dev         dnsutils         libusb-dev         augeas-tools         libyaml-dev         libevent-dev         libjudy-dev         libedit-dev         libnanomsg-dev         python-stdeb         libjemalloc-dev         dkms         sharutils         libncursesw5-dev         libbz2-dev         liblzma-dev         libgdbm-dev         tk-dev         blt-dev         libmpdec-dev         libbluetooth-dev         locales         libsqlite3-dev         libgpm2         time         net-tools         xvfb         python-sphinx         python3-sphinx         cppcheck         clang         pylint         python-pytest         gcovr         python-pytest-cov         python-parse         default-libmysqlclient-dev         libssl-dev         libperl-dev         libpci-dev         libpci3         libsensors4         libsensors4-dev         libwrap0-dev         docutils-common         libjs-sphinxdoc         libjs-underscore         python-docutils         python-jinja2         python-markupsafe         python-pygments         python-roman         python-sphinx         sphinx-common         python3-sphinx         python-lxml         python-jinja2         python-netaddr         python-ipaddr         python-yaml         procmail         libgtest-dev         cmake         autoconf-archive         bash-completion
- ---> Running in da581c59bd7b
-Get:2 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
-Ign:4 http://debian-archive.trafficmanager.net/debian stretch InRelease
-Get:5 http://debian-archive.trafficmanager.net/debian-security stretch/updates InRelease [94.3 kB]
-Ign:1 http://cdn-fastly.deb.debian.org/debian stretch InRelease
-Get:3 http://cdn-fastly.deb.debian.org/debian stretch-updates InRelease [91.0 kB]
-Get:7 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [391 kB]
-Get:6 http://cdn-fastly.deb.debian.org/debian stretch Release [118 kB]
-Get:8 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 Packages [5148 B]
-Get:9 http://cdn-fastly.deb.debian.org/debian stretch Release.gpg [2434 B]
-Get:10 http://debian-archive.trafficmanager.net/debian stretch-backports InRelease [91.8 kB]
-Get:11 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 Packages [7099 kB]
-Get:12 http://debian-archive.trafficmanager.net/debian stretch Release [118 kB]
-Get:13 http://debian-archive.trafficmanager.net/debian-security stretch/updates/main Sources [164 kB]
-Err:13 http://debian-archive.trafficmanager.net/debian-security stretch/updates/main Sources
-  Hash Sum mismatch
-  Hashes of expected file:
-   - Filesize:164324 [weak]
-   - SHA256:45eadaf907bcb31d5b4b6af252d897078e7834eaa826fc57473dac5b8b879ffe
-   - SHA1:bb3b6b3efe4be203c4c47f64cc91685c76e9c36a [weak]
-   - MD5Sum:b7e8552bee2d6c53a6329cda1dcb67a1 [weak]
-  Hashes of received file:
-   - SHA256:a8850c16bca8260665042e2dd27a4c23af32beec2ae89d0fb88a882f48ad6c2c
-   - SHA1:e6284981c4a01c94244a99c445b455c438b228af [weak]
-   - MD5Sum:9f9a1fe7b969607d584d77ebc2062be2 [weak]
-   - Filesize:164324 [weak]
-  Last modification reported: Wed, 29 Aug 2018 05:42:47 +0000
-  Release file created at: Thu, 30 Aug 2018 20:32:32 +0000
-Ign:14 http://debian-archive.trafficmanager.net/debian-security stretch/updates/non-free Sources
-Get:15 http://debian-archive.trafficmanager.net/debian-security stretch/updates/contrib Sources [1384 B]
-Get:16 http://debian-archive.trafficmanager.net/debian-security stretch/updates/non-free amd64 Packages [1600 B]
-Get:17 http://debian-archive.trafficmanager.net/debian-security stretch/updates/contrib amd64 Packages [1760 B]
-Get:18 http://debian-archive.trafficmanager.net/debian-security stretch/updates/main amd64 Packages [391 kB]
-Err:18 http://debian-archive.trafficmanager.net/debian-security stretch/updates/main amd64 Packages
-  
-Get:19 http://debian-archive.trafficmanager.net/debian stretch-backports/main amd64 Packages [409 kB]
-Get:20 http://debian-archive.trafficmanager.net/debian stretch Release.gpg [2434 B]
-Get:21 http://debian-archive.trafficmanager.net/debian stretch/non-free Sources [79.7 kB]
-Get:22 http://debian-archive.trafficmanager.net/debian stretch/main Sources [6758 kB]
-Get:23 http://debian-archive.trafficmanager.net/debian stretch/contrib Sources [44.7 kB]
-Get:24 http://debian-archive.trafficmanager.net/debian stretch/main amd64 Packages [7099 kB]
-Get:25 http://debian-archive.trafficmanager.net/debian stretch/non-free amd64 Packages [78.7 kB]
-Get:26 http://debian-archive.trafficmanager.net/debian stretch/contrib amd64 Packages [50.9 kB]
-Fetched 23.2 MB in 2min 23s (162 kB/s)
-Reading package lists...
-E: Failed to fetch http://debian-archive.trafficmanager.net/debian-security/dists/stretch/updates/main/source/Sources.xz  Hash Sum mismatch
-   Hashes of expected file:
-    - Filesize:164324 [weak]
-    - SHA256:45eadaf907bcb31d5b4b6af252d897078e7834eaa826fc57473dac5b8b879ffe
-    - SHA1:bb3b6b3efe4be203c4c47f64cc91685c76e9c36a [weak]
-    - MD5Sum:b7e8552bee2d6c53a6329cda1dcb67a1 [weak]
-   Hashes of received file:
-    - SHA256:a8850c16bca8260665042e2dd27a4c23af32beec2ae89d0fb88a882f48ad6c2c
-    - SHA1:e6284981c4a01c94244a99c445b455c438b228af [weak]
-    - MD5Sum:9f9a1fe7b969607d584d77ebc2062be2 [weak]
-    - Filesize:164324 [weak]
-   Last modification reported: Wed, 29 Aug 2018 05:42:47 +0000
-   Release file created at: Thu, 30 Aug 2018 20:32:32 +0000
-E: Failed to fetch http://debian-archive.trafficmanager.net/debian-security/dists/stretch/updates/main/binary-amd64/Packages.xz  
-E: Some index files failed to download. They have been ignored, or old ones used instead.
-The command '/bin/sh -c apt-get update && apt-get install -y         apt-utils         default-jre-headless         openssh-server         curl         wget         unzip         git         build-essential         libtool         lintian         sudo         dh-make         dh-exec         kmod         libtinyxml2-4         libboost-program-options1.62-dev         libtinyxml2-dev         python         python-pip         libncurses5-dev         texinfo         dh-autoreconf         python3-pip         doxygen         devscripts         git-buildpackage         perl-modules         libswitch-perl         dh-systemd         libreadline-dev         texlive-latex-base         texlive-generic-recommended         texlive-fonts-recommended         libpam0g-dev         libpam-dev         libcap-dev         imagemagick         ghostscript         groff         libpcre3-dev         gawk         chrpath         libc-ares-dev         libsnmp-dev         libjson-c3         libjson-c-dev         libsystemd-dev         python-ipaddr         cdbs         libxml-simple-perl         graphviz         aspell         bc         fakeroot         build-essential         devscripts         quilt         stgit         module-assistant         gem2deb         libboost-all-dev         libevent-dev         libglib2.0-dev         libqt4-dev         python-all-dev         python-twisted         phpunit         libbit-vector-perl         openjdk-8-jdk         javahelper         maven-debian-helper         ant         libmaven-ant-tasks-java         libhttpclient-java         libslf4j-java         libservlet3.1-java         qt5-default         libpcre3         libpcre3-dev         byacc         flex         libglib2.0-dev         bison         expat         libexpat1-dev         dpatch         libdb-dev         iptables-dev         swig         libtool-bin         libxml2-dev         cpio         squashfs-tools         zip         linux-compiler-gcc-6-x86         linux-kbuild-4.9         libdaemon-dev         libdbus-1-dev         libjansson-dev         libpcap-dev         dnsutils         libusb-dev         augeas-tools         libyaml-dev         libevent-dev         libjudy-dev         libedit-dev         libnanomsg-dev         python-stdeb         libjemalloc-dev         dkms         sharutils         libncursesw5-dev         libbz2-dev         liblzma-dev         libgdbm-dev         tk-dev         blt-dev         libmpdec-dev         libbluetooth-dev         locales         libsqlite3-dev         libgpm2         time         net-tools         xvfb         python-sphinx         python3-sphinx         cppcheck         clang         pylint         python-pytest         gcovr         python-pytest-cov         python-parse         default-libmysqlclient-dev         libssl-dev         libperl-dev         libpci-dev         libpci3         libsensors4         libsensors4-dev         libwrap0-dev         docutils-common         libjs-sphinxdoc         libjs-underscore         python-docutils         python-jinja2         python-markupsafe         python-pygments         python-roman         python-sphinx         sphinx-common         python3-sphinx         python-lxml         python-jinja2         python-netaddr         python-ipaddr         python-yaml         procmail         libgtest-dev         cmake         autoconf-archive         bash-completion' returned a non-zero code: 100
-Makefile.work:97: recipe for target 'stretch' failed
-make[1]: *** [stretch] Error 100
-make[1]: Leaving directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
-Makefile:13: recipe for target 'stretch' failed
-make: *** [stretch] Error 2
-yangbs@centec-OSP:~/sonic/centec/master/sonic-buildimage$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-yangbs@centec-OSP:~/sonic/centec/master/sonic-buildimage$ make all
-+++ --- Making all --- +++
-BLDENV=stretch make -f Makefile.work stretch
-make[1]: Entering directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
-SONiC Build System
-
-Build Configuration
-"CONFIGURED_PLATFORM"             : "centec"
-"SONIC_CONFIG_PRINT_DEPENDENCIES" : ""
-"SONIC_BUILD_JOBS"                : "1"
-"SONIC_CONFIG_MAKE_JOBS"          : "12"
-"USERNAME"                        : "admin"
-"PASSWORD"                        : "x"
-"ENABLE_DHCP_GRAPH_SERVICE"       : ""
-"SHUTDOWN_BGP_ON_START"           : ""
-"ENABLE_PFCWD_ON_START"           : ""
-"SONIC_INSTALL_DEBUG_TOOLS"       : ""
-"ROUTING_STACK"                   : "quagga"
-"ENABLE_SYNCD_RPC"                : ""
-"ENABLE_ORGANIZATION_EXTENSIONS"  : "y"
-"HTTP_PROXY"                      : ""
-"HTTPS_PROXY"                     : ""
-"ENABLE_SYSTEM_TELEMETRY"         : ""
-"SONIC_DEBUGGING_ON"              : "y"
-"SONIC_PROFILING_ON"              : ""
-"KERNEL_PROCURE_METHOD"           : "build"
-
-make: Nothing to be done for 'stretch'.
-make[1]: Leaving directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
-make -f Makefile.work all
-make[1]: Entering directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
-SONiC Build System
-
-Build Configuration
-"CONFIGURED_PLATFORM"             : "centec"
-"SONIC_CONFIG_PRINT_DEPENDENCIES" : ""
-"SONIC_BUILD_JOBS"                : "1"
-"SONIC_CONFIG_MAKE_JOBS"          : "12"
-"USERNAME"                        : "admin"
-"PASSWORD"                        : "x"
-"ENABLE_DHCP_GRAPH_SERVICE"       : ""
-"SHUTDOWN_BGP_ON_START"           : ""
-"ENABLE_PFCWD_ON_START"           : ""
-"SONIC_INSTALL_DEBUG_TOOLS"       : ""
-"ROUTING_STACK"                   : "quagga"
-"ENABLE_SYNCD_RPC"                : ""
-"ENABLE_ORGANIZATION_EXTENSIONS"  : "y"
-"HTTP_PROXY"                      : ""
-"HTTPS_PROXY"                     : ""
-"ENABLE_SYSTEM_TELEMETRY"         : ""
-"SONIC_DEBUGGING_ON"              : "y"
-"SONIC_PROFILING_ON"              : ""
-"KERNEL_PROCURE_METHOD"           : "build"
-
-[ FAIL LOG START ] [ target/debs/linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb-install ]
-Selecting previously unselected package linux-headers-4.9.0-7-amd64.
-(Reading database ... 140478 files and directories currently installed.)
-Preparing to unpack .../linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb ...
-Unpacking linux-headers-4.9.0-7-amd64 (4.9.110-3+deb9u2) ...
-dpkg: dependency problems prevent configuration of linux-headers-4.9.0-7-amd64:
- linux-headers-4.9.0-7-amd64 depends on linux-kbuild-4.9; however:
-  Package linux-kbuild-4.9 is not installed.
- linux-headers-4.9.0-7-amd64 depends on linux-compiler-gcc-6-x86 (>= 4.9.82-1+deb9u1~); however:
-  Package linux-compiler-gcc-6-x86 is not installed.
-
-dpkg: error processing package linux-headers-4.9.0-7-amd64 (--install):
- dependency problems - leaving unconfigured
-Errors were encountered while processing:
- linux-headers-4.9.0-7-amd64
-[  FAIL LOG END  ] [ target/debs/linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb-install ]
-slave.mk:322: recipe for target 'target/debs/linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb-install' failed
-make: *** [target/debs/linux-headers-4.9.0-7-amd64_4.9.110-3+deb9u2_amd64.deb-install] Error 1
-Makefile.work:97: recipe for target 'all' failed
+Error Log:
+make[2]: Entering directory '/sonic/src/sonic-sairedis/SAI'
+dh_strip -psaiserver --dbg-package=saiserver-dbg
+        install -d debian/saiserver-dbg/usr/lib/debug/.build-id/08
+        objcopy --only-keep-debug --compress-debug-sections debian/saiserver/usr/sbin/saiserver debian/saiserver-dbg/usr/lib/debug/.build-id/08/448b1b6f59918c84c701f3eb10ea639933058f.debug
+        chmod 644 debian/saiserver-dbg/usr/lib/debug/.build-id/08/448b1b6f59918c84c701f3eb10ea639933058f.debug
+        strip --remove-section=.comment --remove-section=.note debian/saiserver/usr/sbin/saiserver
+        objcopy --add-gnu-debuglink debian/saiserver-dbg/usr/lib/debug/.build-id/08/448b1b6f59918c84c701f3eb10ea639933058f.debug debian/saiserver/usr/sbin/saiserver
+make[2]: Leaving directory '/sonic/src/sonic-sairedis/SAI'
+   dh_makeshlibs
+        rm -f debian/saiserver/DEBIAN/shlibs
+        rm -f debian/saiserver-dbg/DEBIAN/shlibs
+        rm -f debian/libsaithrift-dev/DEBIAN/shlibs
+        rm -f debian/python-saithrift/DEBIAN/shlibs
+   dh_shlibdeps
+        install -o 0 -g 0 -d debian/saiserver/DEBIAN
+        dpkg-shlibdeps -Tdebian/saiserver.substvars debian/saiserver/usr/sbin/saiserver
+dpkg-shlibdeps: error: no dependency information found for /usr/lib/libsai.so.1.2 (used by debian/saiserver/usr/sbin/saiserver)
+Hint: check if the library actually comes from a package.
+dh_shlibdeps: dpkg-shlibdeps -Tdebian/saiserver.substvars debian/saiserver/usr/sbin/saiserver returned exit code 2
+debian/rules:23: recipe for target 'binary' failed
+make[1]: *** [binary] Error 2
+make[1]: Leaving directory '/sonic/src/sonic-sairedis/SAI'
+dpkg-buildpackage: error: fakeroot debian/rules binary gave error exit status 2
+[  FAIL LOG END  ] [ target/debs/libsaithrift-dev_1.3.5_amd64.deb ]
+slave.mk:286: recipe for target 'target/debs/libsaithrift-dev_1.3.5_amd64.deb' failed
+make: *** [target/debs/libsaithrift-dev_1.3.5_amd64.deb] Error 1
+Makefile.work:127: recipe for target 'all' failed
 make[1]: *** [all] Error 2
-make[1]: Leaving directory '/home/yangbs/sonic/centec/master/sonic-buildimage'
+make[1]: Leaving directory '/home/yangbs/sonic/centec/201811/sonic-buildimage'
 Makefile:6: recipe for target 'all' failed
 make: *** [all] Error 2
-yangbs@centec-OSP:~/sonic/centec/master/sonic-buildimage$ 
+yangbs@centec-OSP:~/sonic/centec/201811/sonic-buildimage$ 
+
+
+
+more docker-saiserver-centec.mk
+# docker image for centec saiserver
+
+DOCKER_SAISERVER_CENTEC = docker-saiserver-centec.gz
+$(DOCKER_SAISERVER_CENTEC)_PATH = $(PLATFORM_PATH)/docker-saiserver-centec
+$(DOCKER_SAISERVER_CENTEC)_DEPENDS += $(SAISERVER) $(PYTHON_SDK_API) $(CRIU)
+$(DOCKER_SAISERVER_CENTEC)_LOAD_DOCKERS += $(DOCKER_CONFIG_ENGINE)
+SONIC_DOCKER_IMAGES += $(DOCKER_SAISERVER_CENTEC)
+
+$(DOCKER_SAISERVER_CENTEC)_CONTAINER_NAME = saiserver
+$(DOCKER_SAISERVER_CENTEC)_RUN_OPT += --net=host --privileged -t
+$(DOCKER_SAISERVER_CENTEC)_RUN_OPT += -v /host/machine.conf:/etc/machine.conf
+$(DOCKER_SAISERVER_CENTEC)_RUN_OPT += -v /etc/sonic:/etc/sonic:ro
+$(DOCKER_SYNCD_CENTEC)_RUN_OPT += --tmpfs /run/criu
+
+
+
+
+more libsaithrift-dev.mk
+# libsaithrift-dev package
+
+SAI_VER = 1.3.5
+
+LIBSAITHRIFT_DEV = libsaithrift-dev_$(SAI_VER)_amd64.deb
+$(LIBSAITHRIFT_DEV)_SRC_PATH = $(SRC_PATH)/sonic-sairedis/SAI
+$(LIBSAITHRIFT_DEV)_DEPENDS += $(LIBTHRIFT) $(LIBTHRIFT_DEV) $(PYTHON_THRIFT) $(THRIFT_COMPILER) $(CENTEC_SAI) $(CENTEC_SAI_DEV)
+$(LIBSAITHRIFT_DEV)_RDEPENDS += $(LIBTHRIFT) $(CENTEC_SAI)
+SONIC_DPKG_DEBS += $(LIBSAITHRIFT_DEV)
+
+PYTHON_SAITHRIFT = python-saithrift_$(SAI_VER)_amd64.deb
+$(eval $(call add_extra_package,$(LIBSAITHRIFT_DEV),$(PYTHON_SAITHRIFT)))
+
+SAISERVER = saiserver_$(SAI_VER)_amd64.deb
+$(SAISERVER)_RDEPENDS += $(LIBTHRIFT) $(CENTEC_SAI)
+$(eval $(call add_extra_package,$(LIBSAITHRIFT_DEV),$(SAISERVER)))
+
+SAISERVER_DBG = saiserver-dbg_$(SAI_VER)_amd64.deb
+$(SAISERVER_DBG)_RDEPENDS += $(SAISERVER)
+$(eval $(call add_extra_package,$(LIBSAITHRIFT_DEV),$(SAISERVER_DBG)))
+
+
+
+
+more sdk.mk
+# Centec SAI
+CENTEC_SAI = libsai_1.3.3_amd64.deb
+$(CENTEC_SAI)_URL = https://github.com/CentecNetworks/goldengate-sai/raw/master/lib/SONiC_1.3.3/libsai_1.3.3-1.0_amd64.deb
+
+SONIC_ONLINE_DEBS += $(CENTEC_SAI)
+
+
+
+more rules.mk
+include $(PLATFORM_PATH)/platform-modules-centec-e582.mk
+include $(PLATFORM_PATH)/sdk.mk
+include $(PLATFORM_PATH)/docker-orchagent-centec.mk
+include $(PLATFORM_PATH)/docker-syncd-centec.mk
+include $(PLATFORM_PATH)/docker-syncd-centec-rpc.mk
+include $(PLATFORM_PATH)/docker-saiserver-centec.mk
+include $(PLATFORM_PATH)/one-image.mk
+include $(PLATFORM_PATH)/libsaithrift-dev.mk
+include $(PLATFORM_PATH)/docker-ptf-centec.mk
+
+SONIC_ALL += $(SONIC_ONE_IMAGE)
+
+# Inject centec sai into sairedis
+$(LIBSAIREDIS)_DEPENDS += $(CENTEC_SAI) $(CENTEC_SAI_DEV) $(LIBSAITHRIFT_DEV)
+
+# Runtime dependency on centec sai is set only for syncd
+$(SYNCD)_RDEPENDS += $(CENTEC_SAI)
+
+
+
+
+more rules.mk
+include $(PLATFORM_PATH)/platform-modules-centec-e582.mk
+include $(PLATFORM_PATH)/sdk.mk
+include $(PLATFORM_PATH)/docker-orchagent-centec.mk
+include $(PLATFORM_PATH)/docker-syncd-centec.mk
+include $(PLATFORM_PATH)/docker-syncd-centec-rpc.mk
+include $(PLATFORM_PATH)/docker-saiserver-centec.mk
+include $(PLATFORM_PATH)/one-image.mk
+include $(PLATFORM_PATH)/libsaithrift-dev.mk
+include $(PLATFORM_PATH)/docker-ptf-centec.mk
+
+SONIC_ALL += $(SONIC_ONE_IMAGE)
+
+# Inject centec sai into sairedis
+$(LIBSAIREDIS)_DEPENDS += $(CENTEC_SAI) $(CENTEC_SAI_DEV) $(LIBSAITHRIFT_DEV)
+
+# Runtime dependency on centec sai is set only for syncd
+$(SYNCD)_RDEPENDS += $(CENTEC_SAI)
+yangbs@centec-OSP:~/sonic/centec/201811/sonic-buildimage/platform/centec$ more one-image.mk
+# sonic centec one image installer
+
+SONIC_ONE_IMAGE = sonic-centec.bin
+$(SONIC_ONE_IMAGE)_MACHINE = centec
+$(SONIC_ONE_IMAGE)_IMAGE_TYPE = onie
+$(SONIC_ONE_IMAGE)_LAZY_INSTALLS += $(CENTEC_E582_48X6Q_PLATFORM_MODULE) \
+                                    $(CENTEC_E582_48X2Q4Z_PLATFORM_MODULE)
+$(SONIC_ONE_IMAGE)_DOCKERS += $(SONIC_INSTALL_DOCKER_IMAGES)
+SONIC_INSTALLERS += $(SONIC_ONE_IMAGE)
+
+
 
